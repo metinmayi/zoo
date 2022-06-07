@@ -15,7 +15,7 @@ const AnimalItem: React.FC<Props> = ({ animal }) => {
       <Title>{animal.latinName}</Title>
       <Img imgURL={animal.imageUrl}></Img>
       <Description>{animal.shortDescription}</Description>
-      <AnimalLink to={`:${animal.id}`}>Go to animal</AnimalLink>
+      <AnimalLink to={`${animal.id}`}>Go to animal</AnimalLink>
     </Wrapper>
   );
 };
