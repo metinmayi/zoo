@@ -1,18 +1,18 @@
 import React from "react";
 import { getStoredAnimals } from "../../api/fetch";
 import { Animal } from "../../models/Animal";
-import { AnimalItem } from "../OneAnimal";
+import { AnimalComponent } from "../AnimalComponent";
 import { Wrapper } from "./wrapper";
 
-const AnimalContainer: React.FC = () => {
+const AnimalList: React.FC = () => {
   const animals: Animal[] = getStoredAnimals();
   return (
     <Wrapper>
       {animals.map((animal) => (
-        <AnimalItem animal={animal} key={animal.id} />
+        <AnimalComponent animal={animal} key={animal.id} />
       ))}
     </Wrapper>
   );
 };
 
-export { AnimalContainer };
+export { AnimalList };

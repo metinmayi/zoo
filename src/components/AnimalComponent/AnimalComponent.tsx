@@ -9,15 +9,15 @@ import { Wrapper } from "./wrapper";
 type Props = {
   animal: Animal;
 };
-const AnimalItem: React.FC<Props> = ({ animal }) => {
+const AnimalComponent: React.FC<Props> = ({ animal }) => {
   return (
     <Wrapper>
-      <Title>{animal.name}</Title>
       <Img imgURL={animal.imageUrl}></Img>
+      <Title>{animal.name}</Title>
       <Description>{animal.shortDescription}</Description>
       <AnimalLink to={`${animal.id}`}>Go to animal</AnimalLink>
     </Wrapper>
   );
 };
 
-export { AnimalItem };
+export { AnimalComponent };
