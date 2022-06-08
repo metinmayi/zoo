@@ -13,9 +13,9 @@ root.render(
   <BrowserRouter>
     <React.StrictMode>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="animals" element={<AnimalContainer />} />
-          <Route path="animals/:id" element={<AnimalComponent />} />
+        <Route path="" element={<App />}>
+          <Route path="/" element={<AnimalContainer />} />
+          <Route path="/:id" element={<AnimalComponent />} />
         </Route>
       </Routes>
     </React.StrictMode>
