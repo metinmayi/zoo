@@ -12,7 +12,7 @@ type Props = {
 const AnimalItem: React.FC<Props> = ({ animal }) => {
   return (
     <Wrapper>
-      <Title>{animal.latinName}</Title>
+      <Title>{animal.name}</Title>
       <Img imgURL={animal.imageUrl}></Img>
       <Description>{animal.shortDescription}</Description>
       <AnimalLink to={`${animal.id}`}>Go to animal</AnimalLink>

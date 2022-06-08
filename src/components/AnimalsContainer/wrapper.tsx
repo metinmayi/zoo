@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: 100%;
+  padding: 1em;
+  width: 60%;
+  margin: 7% auto 2%;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 1em;
+  row-gap: 5em;
   justify-content: space-evenly;
-  background-color: purple;
 `;
 
 export { Wrapper };

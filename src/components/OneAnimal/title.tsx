@@ -6,6 +6,9 @@ const Title = styled.p`
   align-items: center;
   justify-content: center;
   margin: 0;
+  color: var(--primaryColor);
+  font-size: var(--primarySize);
+  font-weight: bold;
 `;
 
 export { Title };
