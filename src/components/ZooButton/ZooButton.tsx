@@ -1,17 +1,25 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import { Wrapper } from "./wrapper";
 
 type Props = {
   children: string;
-  handleClick: Function;
+  handleClick?: Function;
+  disabled?: boolean;
+  variant?: "danger";
 };
-const ZooButton: React.FC<Props> = ({ children, handleClick }) => {
-  const navigate = useNavigate();
+const ZooButton: React.FC<Props> = ({
+  children,
+  handleClick,
+  disabled,
+  variant,
+}) => {
   return (
     <Wrapper>
-      <Button variant="success" onClick={() => handleClick()}>
+      <Button
+        variant={variant ? variant : "success"}
+        onClick={() => handleClick && handleClick()}
+        disabled={disabled}>
         {children}
       </Button>
     </Wrapper>
