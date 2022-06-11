@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 type Props = {
-  imgURL: string;
+  large?: boolean;
 };
-const Img = styled.div<Props>`
+const Img = styled.img<Props>`
   width: 100%;
-  height: 25vh;
-  background-image: url(${(props) => props.imgURL});
-  background-size: cover;
-  background-position: center;
+  height: 35vh;
+  object-fit: ${(props) => (props.large ? "contain" : "fill")};
 `;
 
 export { Img };
