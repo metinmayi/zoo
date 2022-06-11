@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  width: 30%;
+type Props = {
+  large?: boolean;
+};
+const Wrapper = styled.div<Props>`
+  width: ${(props) => (props.large ? "100%" : "30%")};
   padding: 0.5em;
   display: flex;
   flex-direction: column;
