@@ -12,6 +12,7 @@ const fetchNewAnimals = async () => {
   const data = await result.json();
   syncIdWithIndex(data);
   localStorage.setItem("zoo", JSON.stringify(data));
+  return data;
 };
 
 const syncIdWithIndex = (animals: Animal[]): Animal[] => {
