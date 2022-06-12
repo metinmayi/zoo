@@ -14,7 +14,7 @@ const AnimalComponent: React.FC<Props> = ({ animal, large }) => {
   // Redirect to animal function
   const navigate = useNavigate();
   const redirect: Function = (href?: number) => {
-    href ? navigate(`/${href}`) : navigate(-1);
+    typeof href === "number" ? navigate(`/${href}`) : navigate(-1);
   };
 
   const [bgImg, setBgImg] = useState(animal.imageUrl);
