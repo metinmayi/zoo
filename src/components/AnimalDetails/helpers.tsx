@@ -44,6 +44,7 @@ const feedAnimal = (
   );
   setAnimals(newAnimals);
   setHungryAnimals(newHungryAnimals);
+  localStorage.setItem("zoo", JSON.stringify(newAnimals));
 };
 
 // Takes the parameters of the URL and finds the corresponding animal from the list.
